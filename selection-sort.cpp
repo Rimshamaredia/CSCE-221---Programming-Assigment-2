@@ -12,7 +12,14 @@
 void
 SelectionSort::sort(int A[], int size)				// main entry point
 {
-  /* Complete this function with the implementation of selection sort algorithm 
-  Record number of comparisons in variable num_cmps of class Sort
-  */
+  int i,j,min;
+  for(i = 0;i<size-1;i++){
+    min = i;
+    for(j = i+1;j<size;j++){
+      if(A[j]<A[min]){
+        min = j;
+      }
+      swap(&A[min],&A[i]);
+    }
+  }
 }
