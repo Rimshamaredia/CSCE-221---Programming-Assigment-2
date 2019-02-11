@@ -11,7 +11,14 @@
 void 
 BubbleSort::sort(int A[], int size)			// main entry point
 {
-  /* Complete this function with the implementation of bubble sort algorithm 
-     Record number of comparisons in variable num_cmps of class Sort
-  */
+  for(int i = 0;i<size;i++){
+    bool const = false;
+    for(int j = 0;j<(size-i);j++){
+      if(A[j]>A[j+1]){
+        swap(A[j],A[j+1]);
+        const = true;
+      }
+      if(!const)break;
+    }
+  }
 }
